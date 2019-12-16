@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Mlayout.cshtml";
+    var hh = (List<QLThuVien.EF.tBanSaoSach>)ViewBag.hh;
+}
+
+<h2>Main</h2>
+@foreach (var h in hh)
+{
+    <li><a href="">@h.TinhTrangSach</a></li>;
+
+}

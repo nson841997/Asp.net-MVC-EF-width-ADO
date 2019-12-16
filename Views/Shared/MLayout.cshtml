@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta viewport="width=device-width; initial-scale=1">
+    <style>
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .nav {
+            width: 30%;
+            float: left;
+        }
+
+        .main {
+            width: 70%;
+            float: left;
+        }
+
+        .header, .footer {
+            background-color: #68A8C0;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+            .nav ul li {
+                background-color: #7AA4C1;
+                margin-bottom: 5px;
+            }
+
+        .nav li a {
+            line-height: 30px;
+            text-decoration: none;
+            color: #EA8585;
+            display: block;
+        }
+
+            .nav li a:hover {
+                background-color: #5F61C8;
+            }
+
+        .cityimg img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        @RenderPage("Header.cshtml")
+    </div>
+    <div class="row">
+        <div class="nav">
+            @RenderPage("Left.cshtml")
+        </div>
+        <div class="main">
+            @RenderBody()
+        </div>
+    </div>
+    <div class="footer">
+        @RenderPage("footer.cshtml")
+    </div>
+</body>
+</html>
